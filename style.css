@@ -1,0 +1,207 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1600px;
+  margin: 50px auto 0;
+}
+
+.headline {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  line-height: 47px;
+  color: #1D293F;
+}
+
+.subtitle {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 36px;
+  color: #546179;;
+}
+
+.main {
+  width: 100%;
+  margin-top: 65px;
+  display: grid;
+  grid-template-columns: 376px 512px 240px 376px;
+  gap: 32px;
+  grid-template-areas:
+    "card1 card3 card4 card4"
+    "card2 card3 card5 card6"
+}
+
+/* Card */
+.card {
+  position: relative;
+  border-radius: 32px;
+  overflow: hidden;
+}
+
+.card__link {
+  display: block;
+}
+
+.card__image {
+  width: 100%;
+  object-fit: cover;
+}
+
+.card__description {
+  position: absolute;
+  bottom: 40px;
+  left: 30px;
+}
+
+.card__name {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #FFFFFF;
+  margin-bottom: 10px;
+}
+
+.card__subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+
+.card_1 {
+  grid-area: card1;
+}
+
+.card_2 {
+  grid-area: card2;
+}
+
+.card_3 {
+  grid-area: card3;
+}
+
+.card_4 {
+  grid-area: card4;
+}
+
+.card_5 {
+  grid-area: card5;
+}
+
+.card_6 {
+  grid-area: card6;
+}
+
+/* Media */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    max-width: 921px;
+    margin: 50px auto 50px;
+  }
+  
+  .headline {
+    margin-bottom: 20px;
+  }
+  
+  .card__link {
+    display: block;
+    height: 100%;
+  }
+  
+  .card__image {
+    height: 100%;
+  }
+  
+  .card__description {
+    position: absolute;
+    bottom: 20px;
+    left: 25px;
+  }
+  
+  .card__name {
+    margin-bottom: 5px;
+  }
+  
+  .main {
+    margin-top: 35px;
+    grid-template-columns: 295px 1fr 1fr 1fr;
+    grid-template-rows: 254px 254px 413px 340px;
+    grid-template-areas:
+    "card3 card3 card6 card6"
+    "card3 card3 card1 card1"
+    "card4 card4 card4 card4"
+    "card5 card2 card2 card2";
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 425px;
+    margin: 50px auto 50px;
+  }
+  
+  .headline {
+    margin-bottom: 15px;
+  }
+  
+  .main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    gap: 22px;
+  }
+  
+  .card {
+    max-height: 240px;
+    overflow: hidden;
+  }
+  
+  .card__link {
+    display: block;
+    height: 240px;
+    overflow: hidden;
+  }
+  
+  .card__image {
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .card__description {
+    bottom: 30px;
+    left: 32px;
+  }
+  
+  .card__name {
+    margin-bottom: 5px;
+  }
+  
+  .card_3 {
+    order: -2;
+  }
+  
+  .card_4 {
+    order: -1;
+  }
+  
+  .card_6 {
+    order: -1;
+  }
+}
+
+
